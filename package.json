@@ -1,0 +1,31 @@
+{
+  "bugs": {
+    "url": "https://github.com/strawberryangel/key-store-http-api/issues"
+  },
+  "dependencies": {
+    "@reactivex/rxjs": "^5.0.0-beta.11",
+    "body-parser": "~1.0",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "debug": "^2.2.0",
+    "express": "~4.0",
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.5",
+    "mongoose": "~3.6",
+    "nconf": "^0.8.4",
+    "node-uuid": "^1.4.7",
+    "semver": "^5.3.0",
+    "ws": "^1.1.1"
+  },
+  "description": "Key Store HTTP API",
+  "homepage": "https://github.com/strawberryangel/key-store-http-api",
+  "license": "CC-BY-SA-4.0",
+  "main": "app.js",
+  "name": "key-store-http-api",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:strawberryangel/key-store-http-api.git"
+  },
+  "version": "4.0.0"
+}
+
