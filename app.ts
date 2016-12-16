@@ -13,7 +13,7 @@ import {database} from '../common/db'
 ////////////////////////////////////////////////////////////////////////////////
 
 nconf.argv().env().defaults({
-    'port': 3000,
+    'port': 3005,
     'database': 'mongodb://localhost/sl'
 })
 

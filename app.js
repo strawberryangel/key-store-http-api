@@ -10,7 +10,7 @@ const db_1 = require('../common/db');
 //
 ////////////////////////////////////////////////////////////////////////////////
 nconf.argv().env().defaults({
-    'port': 3000,
+    'port': 3005,
     'database': 'mongodb://localhost/sl'
 });
 const port = nconf.get('port');
