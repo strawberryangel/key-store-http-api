@@ -4,6 +4,7 @@ const key_value_store_1 = require("./endpoint-handlers/key-value-store");
 const debug = require('debug')('app:main');
 const nconf = require('nconf');
 const db_1 = require('../common/db');
+const authorization_handler_1 = require("./endpoint-handlers/authorization-handler");
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Configuration
@@ -43,6 +44,8 @@ app.delete('/api/store/:key', keyValueStore.deleteHandler);
 app.get('/api/store', keyValueStore.listHandler);
 app.get('/api/store/:key', keyValueStore.getHandler);
 app.post('/api/store/:key', keyValueStore.postHandler);
+const authorizationHandler = new authorization_handler_1.AuthorizationHandler(db_1.database);
+app.post('/api/authorization/get-handshake-code', authorizationHandler.postGetHandshakeCode);
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Start everything

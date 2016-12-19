@@ -5,6 +5,7 @@ const debug = require('debug')('app:main')
 const nconf = require('nconf')
 
 import {database} from '../common/db'
+import {AuthorizationHandler} from "./endpoint-handlers/authorization-handler"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -54,6 +55,10 @@ app.delete('/api/store/:key', keyValueStore.deleteHandler)
 app.get('/api/store', keyValueStore.listHandler)
 app.get('/api/store/:key', keyValueStore.getHandler)
 app.post('/api/store/:key', keyValueStore.postHandler)
+
+
+const authorizationHandler: AuthorizationHandler = new AuthorizationHandler(database)
+app.post('/api/authorization/get-handshake-code', authorizationHandler.postGetHandshakeCode)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
